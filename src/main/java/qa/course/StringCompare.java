@@ -12,17 +12,10 @@ public class StringCompare {
         String firstString = scn.nextLine();
         System.out.println("Input the second string");
         String secondString = scn.nextLine();
-        if (firstString.equals(secondString))
-        {
-            System.out.println(firstString + " and "+ secondString + " are equal!" );
+        if (firstString.equals(secondString)) {
+            System.out.println(firstString + " and " + secondString + " are equal!");
+        } else {
+            System.out.println(firstString + " and " + secondString + " are NOT equal!");
         }
-        else
-        {
-            System.out.println(firstString + " and "+ secondString + " are NOT equal!" );
-        }
-
-
-
-
     }
 }

@@ -11,7 +11,7 @@ public class WordsCounter {
         String str = scn.nextLine();
         str.trim();
         String[] words = str.split("\\s+");
-        System.out.println("There are "+ words.length + " words in the text!");
+        System.out.println("There are " + words.length + " words in the text!");
 
     }
 
