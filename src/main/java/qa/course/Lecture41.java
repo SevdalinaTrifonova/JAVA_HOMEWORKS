@@ -55,22 +55,21 @@ public class Lecture41 {
     public static int findBiggestNumber(int a, int b, int c) {
         //find the biggest of tree numbers
 
-        int biggestNumber;
+
         if (a >= b) {
             if (a >= c) {
-                biggestNumber = a;
+                return a;
             } else {
-                biggestNumber = c;
+               return c;
             }
 
         } else {
             if (b >= c) {
-                biggestNumber = b;
+                return b;
             } else {
-                biggestNumber = c;
+                return c;
             }
         }
-        return biggestNumber;
 
     }
 
