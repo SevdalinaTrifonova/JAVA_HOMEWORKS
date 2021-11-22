@@ -6,16 +6,37 @@ public class Lecture41 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        findBiggestNumber();
-        System.out.println("Press any key to continue!");
+        String anyKey =  "Press any key to continue!";
+
+        System.out.println("Compare tree numbers and print the biggest one!");
+        System.out.println("Input the first number");
+        int a = scn.nextInt();
+        System.out.println("Input the second number");
+        int b = scn.nextInt();
+        System.out.println("Input the third number");
+        int c = scn.nextInt();
+        int biggestNumber = findBiggestNumber(a, b, c);
+        System.out.printf("The biggest number is %d!%n", biggestNumber);
+        System.out.printf("%s%n",anyKey);
+        scn.nextLine();
         scn.nextLine();
 
-        calcRectangleArea();
-        System.out.println("Press any key to continue!");
+        System.out.println("Calculate perimeter and area of a rectangle!");
+        System.out.println("Input the height");
+        float d = scn.nextFloat();
+        System.out.println("Input the width");
+        float e = scn.nextFloat();
+        calcRectangleArea(d, e);
+        System.out.printf("%s%n",anyKey);
+        scn.nextLine();
         scn.nextLine();
 
-        oddNumber();
-        System.out.println("Press any key to continue!");
+        System.out.println("Even or odd number?");
+        System.out.println("Input number");
+        int f = scn.nextInt();
+        oddNumber(f);
+        System.out.printf("%s%n",anyKey);
+        scn.nextLine();
         scn.nextLine();
 
         System.out.println("Run test dayOfWeek()!");
@@ -28,19 +49,12 @@ public class Lecture41 {
         dayOfWeek(7);
         dayOfWeek(8);
         dayOfWeek(0);
+
     }
 
-    public static void findBiggestNumber() {
-        //print the biggest of tree numbers
+    public static int findBiggestNumber(int a, int b, int c) {
+        //find the biggest of tree numbers
 
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Compare tree numbers and print the biggest one!");
-        System.out.println("Input the first number");
-        int a = scn.nextInt();
-        System.out.println("Input the second number");
-        int b = scn.nextInt();
-        System.out.println("Input the third number");
-        int c = scn.nextInt();
         int biggestNumber;
         if (a >= b) {
             if (a >= c) {
@@ -56,33 +70,24 @@ public class Lecture41 {
                 biggestNumber = c;
             }
         }
-        System.out.printf("The biggest number is %d!%n", biggestNumber);
+        return biggestNumber;
+
     }
 
-    public static void calcRectangleArea() {
+    public static void calcRectangleArea(double h, double w) {
         //calculate perimeter and area of a rectangle
 
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Calculate perimeter and area of a rectangle!");
-        System.out.println("Input the height");
-        float a = scn.nextFloat();
-        System.out.println("Input the width");
-        float b = scn.nextFloat();
-        if (a <= 0 || b <= 0) {
-            System.out.printf("It is not possible to build a rectangle with height=%.2f and width=%.2f!%n", a, b);
+        if (h <= 0 || w <= 0) {
+            System.out.printf("It is not possible to build a rectangle with height=%.2f and width=%.2f!%n", h, w);
         } else {
-            System.out.printf("Perimeter of the rectangle is 2*( %.2f + %.2f ) = %.2f%n", a, b, 2 * (a + b));
-            System.out.printf("Area of the rectangle is %.2f*%.2f = %.2f%n", a, b, a * b);
+            System.out.printf("Perimeter of the rectangle is 2*( %.2f + %.2f ) = %.2f%n", h, w, 2 * (h + w));
+            System.out.printf("Area of the rectangle is %.2f*%.2f = %.2f%n", h, w, h * w);
         }
     }
 
-    public static void oddNumber() {
+    public static void oddNumber(int a) {
         //even or odd number
 
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Even or odd number?");
-        System.out.println("Input number");
-        int a = scn.nextInt();
         System.out.printf("%d is " + (a % 2 == 0 ? "even" : "odd") + " number!%n", a);
     }
 
