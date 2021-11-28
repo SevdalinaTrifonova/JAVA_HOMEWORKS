@@ -6,7 +6,7 @@ public class Lecture41 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        String anyKey =  "Press any key to continue!";
+        String anyKey = "Press any key to continue!";
 
         System.out.println("Compare tree numbers and print the biggest one!");
         System.out.println("Input the first number");
@@ -15,9 +15,8 @@ public class Lecture41 {
         int b = scn.nextInt();
         System.out.println("Input the third number");
         int c = scn.nextInt();
-        int biggestNumber = findBiggestNumber(a, b, c);
-        System.out.printf("The biggest number is %d!%n", biggestNumber);
-        System.out.printf("%s%n",anyKey);
+        System.out.printf("The biggest number is %d!%n", findBiggestNumber(a, b, c));
+        System.out.printf("%s%n", anyKey);
         scn.nextLine();
         scn.nextLine();
 
@@ -27,7 +26,7 @@ public class Lecture41 {
         System.out.println("Input the width");
         float e = scn.nextFloat();
         calcRectangleArea(d, e);
-        System.out.printf("%s%n",anyKey);
+        System.out.printf("%s%n", anyKey);
         scn.nextLine();
         scn.nextLine();
 
@@ -35,7 +34,7 @@ public class Lecture41 {
         System.out.println("Input number");
         int f = scn.nextInt();
         oddNumber(f);
-        System.out.printf("%s%n",anyKey);
+        System.out.printf("%s%n", anyKey);
         scn.nextLine();
         scn.nextLine();
 
@@ -60,7 +59,7 @@ public class Lecture41 {
             if (a >= c) {
                 return a;
             } else {
-               return c;
+                return c;
             }
 
         } else {
