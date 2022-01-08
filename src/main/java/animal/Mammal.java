@@ -3,6 +3,10 @@ package animal;
 public class Mammal {
     private String name;
 
+    public Mammal(String name) {
+        setName(name);
+    }
+
     public String getName() {
         return name;
     }
@@ -11,13 +15,8 @@ public class Mammal {
         this.name = name;
     }
 
-
-    public Mammal(String name) {
-        setName(name);
-    }
-
-    public void eat(String food){
-        System.out.printf("%s eats %s%n",this.name,food);
+    public void eat(String food) {
+        System.out.printf("%s eats %s%n", this.name, food);
     }
 
 }

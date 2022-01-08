@@ -55,7 +55,7 @@ public class Lecture41 {
         //find the biggest of tree numbers
 
 
-        if (a >= b) {
+     /*   if (a >= b) {
             if (a >= c) {
                 return a;
             } else {
@@ -68,7 +68,9 @@ public class Lecture41 {
             } else {
                 return c;
             }
-        }
+
+      */
+      return Math.max(a,Math.max(b,c)) ;
 
     }
 
